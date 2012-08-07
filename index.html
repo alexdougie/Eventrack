@@ -346,12 +346,16 @@ new google.maps.LatLng(51.54003609976941,-0.02039153442387942),
       icon: closedStationLogo
   });
   
-  google.maps.event.addListener(HKW, 'click', function() {
-    alert("Sorry, that station is closed");
+  var closedStationInfoWindow = new google.maps.InfoWindow({
+    content: /*NEED HTML FROM TOM*/
   });
   
+  google.maps.event.addListener(HKW, 'click', function() {
+    closedStationInfoWindow.open(map,HKW);
+  });
+
   google.maps.event.addListener(PML, 'click', function() {
-    alert("Sorry, that station is closed");
+    closedStationInfoWindow.open(map,PML);
   });
   
   }
