@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map_canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJVxO2zUI8H8RbdkouJ9c51DzAfKHZRa4&sensor=false">
+    </script>
+    <script type="text/javascript">
+      var gatemap = {};
+gatemap['victoria'] = {
+  center: new google.maps.LatLng(51.53674,-0.021182),
+  population: 40000
+};
+gatemap['eton_manor'] = {
+  center: new google.maps.LatLng(51.55324,-0.020869),
+  population: 1
+};
+gatemap['greenway'] = {
+  center: new google.maps.LatLng(51.534204,-0.006922),
+  population: 3000
+}
+gatemap['stratford_walk'] = {
+  center: new google.maps.LatLng(51.542165,-0.008746),
+  population: 5000
+}
+var gateCircle;
+
+function initialize() {
+	for (var gate in gatemap) {
+		if (gatemap[gate].population < 1000) {
+		gatemap[gate].population = 1000;
+		}
+	}
+  var mapOptions = {
+    zoom: 14,
+    center: new google.maps.LatLng(51.540997,-0.0161),
+    mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+
+  var map = new google.maps.Map(document.getElementById("map_canvas"),
+      mapOptions);
+
+  for (var gate in gatemap) {
+    // Construct the circle for each value in gatemap. We scale population by 20.
+    var populationOptions = {
+      strokeColor: "#FF0000",
+      strokeOpagate: 0.8,
+      strokeWeight: 2,
+      fillColor: "#FF0000",
+      fillOpagate: 0.35,
+      map: map,
+      center: gatemap[gate].center,
+      radius: gatemap[gate].population / 80
+    };
+    gateCircle = new google.maps.Circle(populationOptions);
+  }
+}
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas" style="width:90%; height:90%"></div>
+  </body>
+</html>
