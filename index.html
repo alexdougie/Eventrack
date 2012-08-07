@@ -4,7 +4,62 @@
     <style type="text/css">
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
-      #map_canvas { height: 100% }
+      #map_canvas { position: absolute;
+      top:0px;
+      left:0px;
+      right:0px;
+      bottom:20%;
+
+      }
+
+      #information {
+      position: absolute;
+      top:80%;
+      left:0px;
+      right:0px;
+      bottom:0px%;
+      }
+
+      .landscape #map_canvas { position: absolute;
+      top:0px;
+      left:0px;
+      right:20%;
+      bottom:0px;
+      float:left;
+      padding:0px;
+      margin:0px;
+
+      }
+
+      .landscape #information {
+      position: static;
+      top:0px;
+      left:80%;
+      width: 20%;
+      right:0px;
+      bottom:0px;
+      float: right;
+
+      }
+      .landscape table {
+        padding:5px;
+        width:100%;
+      }
+      tr td, th{
+        border-bottom: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: #e81ad0;
+        margin:0px;
+        padding:5px;
+        text-align: left;
+        font-size: 12px;
+      }
+      body {
+        background-color: black;
+        color: white;
+        font-family: verdana, sans-serif;
+        font-size: 12px;
+      }
     </style>
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDJVxO2zUI8H8RbdkouJ9c51DzAfKHZRa4&sensor=false">
@@ -78,7 +133,14 @@ function initialize() {
   bermudaTriangle.setMap(map);
     </script>
   </head>
-  <body onload="initialize()">
-    <div id="map_canvas" style="width:90%; height:90%"></div>
+  <body onload="initialize()" class="landscape">
+    <div id="information"><table cellspacing="0">
+       <tr><th>Station</th><th>Time</td><th>Plat</th></tr>
+       <tr><td>Stratford</td><td>5:12</td><td>1</td></tr>
+       <tr><td>Bond Street</td><td>6:54</td><td>5</td></tr>
+       <tr><td>Hyde Park</td><td>7:48</td><td>7</td></tr>
+    </table></div>
+    <div id="map_canvas"></div>
+
   </body>
 </html>
