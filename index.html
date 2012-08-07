@@ -59,6 +59,23 @@ function initialize() {
     gateCircle = new google.maps.Circle(populationOptions);
   }
 }
+
+  var parkCoords = [
+    new google.maps.LatLng(25.774252, -80.190262),
+    new google.maps.LatLng(18.466465, -66.118292),
+    new google.maps.LatLng(32.321384, -64.75737)
+  ];
+
+  parkOutline = new google.maps.Polygon({
+    paths: parkCoords,
+    strokeColor: "#FF0000",
+    strokeOpacity: 0.8,
+    strokeWeight: 3,
+    fillColor: "#FF0000",
+    fillOpacity: 1
+  });
+
+  bermudaTriangle.setMap(map);
     </script>
   </head>
   <body onload="initialize()">
