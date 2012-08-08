@@ -296,7 +296,7 @@ new google.maps.LatLng(51.54003609976941,-0.02039153442387942),
     paths: parkCoords,
     strokeColor: "#E81AD0",
     strokeOpacity: 0.8,
-    strokeWeight: 3,
+    strokeWeight: 1,
     fillColor: "#E81AD0",
     fillOpacity: 0.2
   });
@@ -310,42 +310,48 @@ new google.maps.LatLng(51.54003609976941,-0.02039153442387942),
   var SRA = new google.maps.Marker({
       position: SRALatLng,
       map: map,
-      icon: stationLogo
+      icon: stationLogo,
+	  title: "Stratford Station"
   });
   
   var SFALatLng = new google.maps.LatLng(51.54494723723354, -0.008776187896728516);
   var SFA = new google.maps.Marker({
       position: SFALatLng,
       map: map,
-      icon: stationLogo
+      icon: stationLogo,
+	  title: "Stratford International Station"
   });
   
   var HMNLatLng = new google.maps.LatLng(51.547079,-0.043002);
   var HMN = new google.maps.Marker({
       position: HMNLatLng,
       map: map,
-      icon: stationLogo
+      icon: stationLogo,
+	  title: "Homerton Station"
   });
   
   var WEHLatLng = new google.maps.LatLng(51.528651,0.006039);
   var WEH = new google.maps.Marker({
       position: WEHLatLng,
       map: map,
-      icon: stationLogo
+      icon: stationLogo,
+	  title: "West Ham Station"
   });
   
   var HKWLatLng = new google.maps.LatLng(51.543433,-0.024656);
   var HKW = new google.maps.Marker({
       position: HKWLatLng,
       map: map,
-      icon: closedStationLogo
+      icon: closedStationLogo,
+	  title: "Hackney Wick Station"
   });
   
   var PMLLatLng = new google.maps.LatLng(51.533883,-0.014378);
   var PML = new google.maps.Marker({
       position: PMLLatLng,
       map: map,
-      icon: closedStationLogo
+      icon: closedStationLogo,
+	  title: "Unknown Station"
   });
   
   var closedStationInfoWindow = new google.maps.InfoWindow({
