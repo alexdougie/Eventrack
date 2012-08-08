@@ -1,0 +1,88 @@
+SFA,1F29 WTT,1158 (1158),Faversham,"Plat 1, UPCTRL",London St Pancras,1202 (1202),SE,1F,1158 ,1202 ,1
+SFA,1H28 WTT,1159 (1159),London St Pancras,"Plat 4, DNCTRL",Ebbsfleet Intl,1203 (1203),SE,1H,1159 ,1203 ,4
+SFA,1L29 WTT,1205 (1205),Ebbsfleet Intl,"Plat 2, UPCTRL",London St Pancras,1209 (1209),SE,1L,1205 ,1209 ,2
+SFA,1J30 WTT,1210 (1210),London St Pancras,"Plat 3, DNCTRL",Ashford Intl,1214 (1214),SE,1J,1210 ,1214 ,3
+SFA,1H29 WTT,1212 (1212),Ebbsfleet Intl,"Plat 1, UPCTRL",London St Pancras,1216 (1216),SE,1H,1212 ,1216 ,1
+SFA,1H30 WTT,1217 (1217),London St Pancras,"Plat 4, DNCTRL",Ebbsfleet Intl,1221 (1221),SE,1H,1217 ,1221 ,4
+SFA,1J29 WTT,1219 (1219),Ashford Intl,"Plat 2, UPCTRL",London St Pancras,1223 (1223),SE,1J,1219 ,1223 ,2
+SFA,1F30 WTT,1224 (1224),London St Pancras,"Plat 3, DNCTRL",Faversham,1228 (1228),SE,1F,1224 ,1228 ,3
+SFA,1L31 WTT,1226 (1226),Ebbsfleet Intl,"Plat 1, UPCTRL",London St Pancras,1230 (1230),SE,1L,1226 ,1230 ,1
+SFA,1L30 WTT,1231 (1231),London St Pancras,"Plat 4, DNCTRL",Ebbsfleet Intl,1235 (1235),SE,1L,1231 ,1235 ,4
+SFA,1F31 WTT,1233 (1233),Ebbsfleet Intl,"Plat 2, UPCTRL",London St Pancras,1237 (1237),SE,1F,1233 ,1237 ,2
+SFA,1F32 WTT,1238 (1238),London St Pancras,"Plat 3, DNCTRL",Ebbsfleet Intl,1242 (1242),SE,1F,1238 ,1242 ,3
+SFA,1J31 WTT,1244 (1245),Ashford Intl,"Plat 1, UPCTRL",London St Pancras,1248 (1248),SE,1J,1244,1248,1
+SFA,1J32 WTT,1245 (1245),London St Pancras,"Plat 4, DNCTRL",Ashford Intl,1249 (1249),SE,1J,1245 ,1249 ,4
+SFA,1H31 WTT,1251 (1251),Ebbsfleet Intl,"Plat 2, UPCTRL",London St Pancras,1255 (1255),SE,1H,1251 ,1255 ,2
+SFA,1L32 WTT,1252 (1252),London St Pancras,"Plat 3, DNCTRL",Ebbsfleet Intl,1256 (1256),SE,1L,1252 ,1256 ,3
+SRA,2S24 WTT,null,Starts here,Plat11,Bishops Stortford,1200 (1200),LE,2S,null,1200 ,11
+SRA,2K55 WTT,1201 (1201),Southend Victoria,"Plat 9, ML",London Liverpool St,1201 (1201),LE,2K,1201 ,1201,9
+SRA,2Y27 WTT,null,Starts here,"Plat 2, NLL",Clapham Junction,1202 (1202),LO,2Y,null,1202 ,2
+SRA,1K40 WTT,1201 (1202),London Liverpool St,"Plat10, ML",Southend Victoria,1202 (1202),LE,1K,1201,1202 ,10
+SRA,2L40 WTT,1205 (1210),Clapham Junction,Plat 2,Terminates here,null,LO,2L,1205 ,null,2
+SRA,1Y37 WTT,1205 (1205),Ipswich,"Plat 9, ML",London Liverpool St,1205 (1205),LE,1Y,1205 ,1205,9
+SRA,2N53 WTT,null,Starts here,"Plat 1, NLL",Richmond,1207 (1207),LO,2N,null,1207 ,1
+SRA,2S25 WTT,1207 (1207),Bishops Stortford,Plat11,Terminates here,null,LE,2S,1207 ,null,11
+SRA,2W76 WTT,1206 (1207),London Liverpool St,"Plat 8, EL",Shenfield,1208 (1208),LE,2W,1206,1208,8
+SRA,2W71 WTT,1207 (1207),Shenfield,"Plat 5, EL",London Liverpool St,1209 (1209),LE,2W,1207 ,1209 ,5
+SRA,1Y16 WTT,1208 (1209),London Liverpool St,"Plat10, ML",Ipswich,1209 (1209),LE,1Y,1208,1209 ,10
+SRA,2N44 WTT,1214 (1216),Richmond,Plat 1,Terminates here,null,LO,2N,1214 ,null,1
+SRA,2Y28 WTT,null,Starts here,"Plat 2, NLL",Clapham Junction,1215 (1215),LO,2Y,null,1215 ,2
+SRA,2W78 WTT,1216 (1217),London Liverpool St,"Plat 8, EL",Shenfield,1218 (1218),LE,2W,1216,1218,8
+SRA,2W73 WTT,1217 (1217),Shenfield,"Plat 5, EL",London Liverpool St,1219 (1219),LE,2W,1217 ,1219 ,5
+SRA,2L41 WTT,1219 (1224),Clapham Junction,Plat 2,Terminates here,null,LO,2L,1219 ,null,2
+SRA,1K57 WTT,1219 (1219),Southend Victoria,"Plat 9, ML",London Liverpool St,1219 (1219),LE,1K,1219 ,1219,9
+SRA,2K42 WTT,1219 (1220),London Liverpool St,"Plat10, ML",Southend Victoria,1220 (1220),LE,2K,1219,1220 ,10
+SRA,2N55 WTT,null,Starts here,"Plat 1, NLL",Richmond,1222 (1222),LO,2N,null,1222 ,1
+SRA,1N35 WTT,1222 (1222),Clacton-on-sea,"Plat 9, ML",London Liverpool St,1222 (1222),LE,1N,1222 ,1222,9
+SRA,1N22 WTT,1224 (1225),London Liverpool St,"Plat10, ML",Clacton-on-sea,1225 (1225),LE,1N,1224,1225 ,10
+SRA,2W80 WTT,1226 (1227),London Liverpool St,"Plat 8, EL",Shenfield,1228 (1228),LE,2W,1226,1228,8
+SRA,2W75 WTT,1227 (1227),Shenfield,"Plat 5, EL",London Liverpool St,1229 (1229),LE,2W,1227 ,1229 ,5
+SRA,2N46 WTT,1229 (1234),Richmond,Plat 1,Terminates here,null,LO,2N,1229 ,null,1
+SRA,2S26 WTT,null,Starts here,Plat11,Bishops Stortford,1230 (1230),LE,2S,null,1230 ,11
+SRA,2Y29 WTT,null,Starts here,"Plat 2, NLL",Clapham Junction,1232 (1232),LO,2Y,null,1232 ,2
+SRA,2L42 WTT,1235 (1240),Clapham Junction,Plat 2,Terminates here,null,LO,2L,1235 ,null,2
+SRA,2F33 WTT,1236 (1236),Colchester Town,"Plat 9, ML",London Liverpool St,1236 (1236),LE,2F,1236 ,1236,9
+SRA,2S27 WTT,1237 (1237),Bishops Stortford,Plat11,Terminates here,null,LE,2S,1237 ,null,11
+SRA,1P28 WTT,1237,London Liverpool St,"Plat10, ML",Norwich,1238 (1238),LE,1P,1237,1238,10
+SRA,2W82 WTT,1236 (1237),London Liverpool St,"Plat 8, EL",Shenfield,1238 (1238),LE,2W,1236,1238,8
+SRA,2N57 WTT,null,Starts here,"Plat 1, NLL",Richmond,1239 (1239),LO,2N,null,1239 ,1
+SRA,2W77 WTT,1237 (1237),Shenfield,"Plat 5, EL",London Liverpool St,1239 (1239),LE,2W,1237 ,1239 ,5
+SRA,1K59 WTT,1239 (1239),Southend Victoria,"Plat 9, ML",London Liverpool St,1239 (1239),LE,1K,1239 ,1239,9
+SRA,1K44 WTT,1241 (1242),London Liverpool St,"Plat10, ML",Southend Victoria,1242 (1242),LE,1K,1241,1242 ,10
+SRA,2N48 WTT,1244 (1248),Richmond,Plat 1,Terminates here,null,LO,2N,1244 ,null,1
+SRA,2F48 WTT,1244 (1245),London Liverpool St,"Plat10, ML",Colchester Town,1245 (1245),LE,2F,1244,1245 ,10
+SRA,2Y30 WTT,null,Starts here,"Plat 2, NLL",Clapham Junction,1245 (1245),LO,2Y,null,1245 ,2
+SRA,1P31 WTT,1245 (1245),Norwich,"Plat 9, ML",London Liverpool St,1246 (1246),LE,1P,1245 ,1246 ,9
+SRA,2W84 WTT,1246 (1247),London Liverpool St,"Plat 8, EL",Shenfield,1248 (1248),LE,2W,1246,1248,8
+SRA,2W79 WTT,1247 (1247),Shenfield,"Plat 5, EL",London Liverpool St,1249 (1249),LE,2W,1247 ,1249 ,5
+SRA,2L43 WTT,1249 (1254),Clapham Junction,Plat 2,Terminates here,null,LO,2L,1249 ,null,2
+SRA,2N59 WTT,null,Starts here,"Plat 1, NLL",Richmond,1252 (1252),LO,2N,null,1252 ,1
+SRA,1F41 WTT,1252 (1252),Braintree,"Plat 9, ML",London Liverpool St,1252 (1252),LE,1F,1252 ,1252,9
+SRA,1F24 WTT,1254 (1255),London Liverpool St,"Plat10, ML",Braintree,1255 (1255),LE,1F,1254,1255 ,10
+SRA,2W86 WTT,1256 (1257),London Liverpool St,"Plat 8, EL",Shenfield,1258 (1258),LE,2W,1256,1258,8
+SRA,2W81 WTT,1257 (1257),Shenfield,"Plat 5, EL",London Liverpool St,1259 (1259),LE,2W,1257 ,1259 ,5
+SRA,2N50 WTT,1259 (1303),Richmond,Plat 1,Terminates here,null,LO,2N,1259 ,null,1
+HMN,2N51 WTT,1200 (1158),Stratford (London),Plat 1 UPNLL,Richmond,1201 (1158),LO,2N,1200,1201 ,1
+HMN,2Y27 WTT,1208 (1206),Stratford (London),Plat 1 UPNLL,Clapham Junction,1208 (1206),LO,2Y,1208 ,1208,1
+HMN,2N53 WTT,1212 (1213),Stratford (London),Plat 1 UPNLL,Richmond,1213 (1213),LO,2N,1212,1213 ,1
+HMN,2Y28 WTT,1222 (1221),Stratford (London),Plat 1 UPNLL,Clapham Junction,1223 (1221),LO,2Y,1222,1223 ,1
+HMN,2N55 WTT,1227 (1228),Stratford (London),Plat 1 UPNLL,Richmond,1228 (1228),LO,2N,1227,1228 ,1
+HMN,2Y29 WTT,1238 (1236),Stratford (London),Plat 1 UPNLL,Clapham Junction,1238 (1236),LO,2Y,1238 ,1238,1
+HMN,2N57 WTT,1244 (1245),Stratford (London),Plat 1 UPNLL,Richmond,1245 (1245),LO,2N,1244,1245 ,1
+HMN,2Y30 WTT,1252 (1251),Stratford (London),Plat 1 UPNLL,Clapham Junction,1253 (1251),LO,2Y,1252,1253 ,1
+WEH,2B23 STP,1203 (1204),Shoeburyness,UP,London Fenchurch St,1204 (1204),CC,2B,1203,1204 ,UP
+WEH,1B20 STP,1208 (1208),London Fenchurch St,DN,Shoeburyness,1208 (1208),CC,1B,1208 ,1208,DN
+WEH,2R35 STP,1211 (1211),Grays,UP,London Fenchurch St,1211 (1211),CC,2R,1211 ,1211,UP
+WEH,2R32 STP,1214 (1214),London Fenchurch St,DN,Grays,1214 (1214),CC,2R,1214 ,1214,DN
+WEH,1B47 STP,1215 (1216),Shoeburyness,UP,London Fenchurch St,1216 (1216),CC,1B,1215,1216 ,UP
+WEH,2B30 STP,1219 (1219),London Fenchurch St,DN,Shoeburyness,1219 (1219),CC,2B,1219 ,1219,DN
+WEH,2D25 STP,1225 (1226),Southend Central,UP,London Fenchurch St,1226 (1226),CC,2D,1225,1226 ,UP
+WEH,2D18 STP,1229 (1229),London Fenchurch St,DN,Southend Central,1229 (1229),CC,2D,1229 ,1229,DN
+WEH,2B25 STP,1233 (1234),Shoeburyness,UP,London Fenchurch St,1234 (1234),CC,2B,1233,1234 ,UP
+WEH,1B22 STP,1238 (1238),London Fenchurch St,DN,Shoeburyness,1238 (1238),CC,1B,1238 ,1238,DN
+WEH,2R37 STP,1241 (1241),Grays,UP,London Fenchurch St,1241 (1241),CC,2R,1241 ,1241,UP
+WEH,2R34 STP,1244 (1244),London Fenchurch St,DN,Grays,1244 (1244),CC,2R,1244 ,1244,DN
+WEH,1B49 STP,1245 (1246),Shoeburyness,UP,London Fenchurch St,1246 (1246),CC,1B,1245,1246 ,UP
+WEH,2B32 STP,1249 (1249),London Fenchurch St,DN,Shoeburyness,1249 (1249),CC,2B,1249 ,1249,DN
+WEH,2D27 STP,1255 (1256),Southend Central,UP,London Fenchurch St,1256 (1256),CC,2D,1255,1256 ,UP
+WEH,2D20 STP,1259 (1259),London Fenchurch St,DN,Southend Central,1259 (1259),CC,2D,1259 ,1259,DN
