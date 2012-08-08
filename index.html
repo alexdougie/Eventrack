@@ -63,10 +63,13 @@
         font-size: 20px;
       }
     </style>
+
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyChSKtxvJ_qtnpnTKiEzuneydXS8ctunJ0&sensor=false">
     </script>
     <script type="text/javascript">
+	window.onload = function() { BindEvent(); }
+	
       var gatemap = {};
 gatemap['victoria'] = {
   center: new google.maps.LatLng(51.53674,-0.021182),
@@ -385,6 +388,22 @@ new google.maps.LatLng(51.54003609976941,-0.02039153442387942),
 	  title: "Pudding Mill Lane"
   });
   
+  google.maps.event.addListener(SRA, 'click', function() {
+    document.forms["Combobox"].elements["Station"].value = 0
+  });
+  
+  google.maps.event.addListener(SFA, 'click', function() {
+    document.forms["Combobox"].elements["Station"].value = 1
+  });
+  
+  google.maps.event.addListener(WEH, 'click', function() {
+    document.forms["Combobox"].elements["Station"].value = 2
+  });
+  
+  google.maps.event.addListener(HMN, 'click', function() {
+    document.forms["Combobox"].elements["Station"].value = 3
+  });
+  
   var closedStationInfoWindow = new google.maps.InfoWindow({
     content: '<p style=color:black;>Sorry, that station is closed</p>'
   });
@@ -436,12 +455,15 @@ var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
   </head>
   <body onload="initialize()" class="landscape">
     <div id="information">
+	<form name="Combobox">
+	<h3 align="center">Station</h3>
 	<SELECT NAME="Station" SIZE=0>  
-<OPTION VALUE="0">Stratford Station
-<OPTION VALUE="1">Stratford International Station
-<OPTION VALUE="2">West Ham Station
-<OPTION VALUE="3">Homerton Station
+<OPTION VALUE="0">Stratford
+<OPTION VALUE="1">Stratford International
+<OPTION VALUE="2">West Ham
+<OPTION VALUE="3">Homerton
 </SELECT> 
+</form>
 	<table cellspacing="0">
        <tr><th>Destination</th><th>Time</td><th>Plat</th></tr>
        <tr><td>London Waterloo</td><td>5:12</td><td>1</td></tr>
