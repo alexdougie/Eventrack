@@ -429,6 +429,12 @@ var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
       icon: gateLogo,
 	  title: "Victoria Gate"
   });
+  var victoriaWindow = new google.maps.InfoWindow({
+    content: '<p style=color:black;>Victoria Gate</p>'
+  });
+   google.maps.event.addListener(victoria, 'click', function() {
+    victoriaWindow.open(map,victoria);
+  });
 
   var eton_manorLatLng = new google.maps.LatLng(51.55298,-0.019251);
   var eton_manor = new google.maps.Marker({
@@ -436,6 +442,12 @@ var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
       map: map,
       icon: gateLogo,
 	  title: "Eton Manor Gate"
+  });
+  var eton_manorWindow = new google.maps.InfoWindow({
+    content: '<p style=color:black;>Eton Manor Gate</p>'
+  });
+   google.maps.event.addListener(eton_manor, 'click', function() {
+    eton_manorWindow.open(map,eton_manor);
   });
   
    var greenwayLatLng = new google.maps.LatLng(51.534431,-0.007769);
@@ -445,6 +457,12 @@ var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
       icon: gateLogo,
 	  title: "Greenway Gate"
   });
+  var greenwayWindow = new google.maps.InfoWindow({
+    content: '<p style=color:black;>Greenway Gate</p>'
+  });
+   google.maps.event.addListener(greenway, 'click', function() {
+    greenwayWindow.open(map,greenway);
+  });
   
     var stratford_walkLatLng = new google.maps.LatLng(51.542165,-0.008746);
   var stratford_walk = new google.maps.Marker({
@@ -452,6 +470,12 @@ var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
       map: map,
       icon: gateLogo,
 	  title: "Stratford Walk Gate"
+  });
+  var stratford_walkWindow = new google.maps.InfoWindow({
+    content: '<p style=color:black;>Stratford Walk Gate</p>'
+  });
+   google.maps.event.addListener(stratford_walk, 'click', function() {
+    stratford_walkWindow.open(map,stratford_walk);
   });
   
   }
