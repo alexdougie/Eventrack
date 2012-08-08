@@ -70,26 +70,30 @@
       var gatemap = {};
 gatemap['victoria'] = {
   center: new google.maps.LatLng(51.53674,-0.021182),
-  population: 40000
+  population: 3000
 };
 gatemap['eton_manor'] = {
   center: new google.maps.LatLng(51.55298,-0.019251),
-  population: 1
+  population: 15000
 };
 gatemap['greenway'] = {
-  center: new google.maps.LatLng(51.534204,-0.006922),
-  population: 3000
+  center: new google.maps.LatLng(51.534431,-0.007769),
+  population: 25000
 }
 gatemap['stratford_walk'] = {
   center: new google.maps.LatLng(51.542165,-0.008746),
-  population: 5000
+  population: 40000
 }
+  
 var gateCircle;
 
 function initialize() {
   for (var gate in gatemap) {
     if (gatemap[gate].population < 1000) {
     gatemap[gate].population = 1000;
+    }
+	if (gatemap[gate].population > 40000) {
+    gatemap[gate].population = 40000;
     }
   }
   var mapOptions = {
@@ -102,12 +106,39 @@ function initialize() {
       mapOptions);
 
   for (var gate in gatemap) {
-    // Construct the circle for each value in gatemap. We scale population by 20.
+    // Construct the circle for each value in gatemap. 
+	var color = "#09FF00";
+	if (gatemap[gate].population > 5000) {
+	color = "#6FFF00";
+	}
+	if (gatemap[gate].population > 10000) {
+	color = "#BBFF00";
+	}
+	if (gatemap[gate].population > 15000) {
+	color = "#E5FF00";
+	}
+	if (gatemap[gate].population > 20000) {
+	color = "#FFCC00";
+	}
+	if (gatemap[gate].population > 25000) {
+	color = "#FF9100";
+	}
+	if (gatemap[gate].population > 25000) {
+	color = "#FF6600";
+	}
+	if (gatemap[gate].population > 30000) {
+	color = "#CC0808";
+	}
+	if (gatemap[gate].population > 35000) {
+	color = "#FF0000";
+	}
     var populationOptions = {
-      strokeColor: "#FF0000",
+	// Population is between 1,000 and 40,000 
+	// Population determines colour of the circle
+      strokeColor: color,
       strokeOpagate: 0.8,
       strokeWeight: 2,
-      fillColor: "#FF0000",
+      fillColor: color,
       fillOpagate: 0.35,
       map: map,
       center: gatemap[gate].center,
@@ -364,6 +395,40 @@ new google.maps.LatLng(51.54003609976941,-0.02039153442387942),
 
   google.maps.event.addListener(PML, 'click', function() {
     closedStationInfoWindow.open(map,PML);
+  });
+  
+  var gateLogo = 'flag.png'
+
+var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
+  var victoria = new google.maps.Marker({
+      position: victoriaLatLng,
+      map: map,
+      icon: gateLogo,
+	  title: "Victoria Gate"
+  });
+
+  var eton_manorLatLng = new google.maps.LatLng(51.55298,-0.019251);
+  var eton_manor = new google.maps.Marker({
+      position: eton_manorLatLng,
+      map: map,
+      icon: gateLogo,
+	  title: "Eton Manor Gate"
+  });
+  
+   var greenwayLatLng = new google.maps.LatLng(51.534431,-0.007769);
+  var greenway = new google.maps.Marker({
+      position: greenwayLatLng,
+      map: map,
+      icon: gateLogo,
+	  title: "Greenway Gate"
+  });
+  
+    var stratford_walkLatLng = new google.maps.LatLng(51.542165,-0.008746);
+  var stratford_walk = new google.maps.Marker({
+      position: stratford_walkLatLng,
+      map: map,
+      icon: gateLogo,
+	  title: "Stratford Walk Gate"
   });
   
   }
