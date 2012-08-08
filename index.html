@@ -63,7 +63,6 @@
         font-size: 20px;
       }
     </style>
-
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyChSKtxvJ_qtnpnTKiEzuneydXS8ctunJ0&sensor=false">
     </script>
@@ -99,6 +98,7 @@ function initialize() {
     gatemap[gate].population = 40000;
     }
   }
+  OnChange(document.forms["Combobox"].elements["Station"]);
   var mapOptions = {
     zoom: 14,
     center: new google.maps.LatLng(51.540997,-0.0161),
@@ -387,7 +387,7 @@ new google.maps.LatLng(51.54003609976941,-0.02039153442387942),
       icon: closedStationLogo,
 	  title: "Pudding Mill Lane"
   });
-  
+
   google.maps.event.addListener(SRA, 'click', function() {
     document.forms["Combobox"].elements["Station"].value = 0
 	OnChange(document.forms["Combobox"].elements["Station"]);
@@ -461,7 +461,30 @@ var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
 function OnChange(dropdown)
 {
 //Stuff that happens when the drop down menu is changed
-    alert("Oh you, you changed that drop down, didn't you!?")
+    if (dropdown.value == 0) {
+	clearTable();
+	appendTable("Kings Cross","5:12",3);
+	}
+	if (dropdown.value == 1) {
+	clearTable();
+	appendTable("London Waterloo","5:09",1);
+	}
+	if (dropdown.value == 2) {
+	clearTable();
+	appendTable("Piccadilly","5:14",2);
+	}
+	if (dropdown.value == 3) {
+	clearTable();
+	appendTable("Lilpad","5:19",7);
+	}
+}
+
+function appendTable(Destination, Time, Plat){
+document.getElementById("Trains").innerHTML += "<tr><td>" + Destination + "</td><td>" + Time + "</td><td>" + Plat + "</td></tr>";
+}
+
+function clearTable(){
+document.getElementById("Trains").innerHTML = "<tr><th>Destination</th><th>Time</td><th>Plat</th></tr>"
 }
 
 </SCRIPT>
@@ -480,12 +503,11 @@ function OnChange(dropdown)
 </SELECT> 
 
 </form>
-	<table cellspacing="0">
+	<div id="Stratford">
+	<table id="Trains" cellspacing="0">
        <tr><th>Destination</th><th>Time</td><th>Plat</th></tr>
-       <tr><td>London Waterloo</td><td>5:12</td><td>1</td></tr>
-       <tr><td>Bond Street</td><td>6:54</td><td>5</td></tr>
-       <tr><td>Hyde Park</td><td>7:48</td><td>7</td></tr>
     </table></div>
+	</div>
     <div id="map_canvas"></div>
 
   
