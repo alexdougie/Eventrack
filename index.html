@@ -39,7 +39,7 @@
       right:0px;
       bottom:0px;
       float: right;
-      padding-top: 75px;
+      padding-top: 50px;
       }
       .landscape table {
         padding:0 5px 5px 5px;
@@ -150,11 +150,11 @@ function initialize() {
     gateCircle = new google.maps.Circle(populationOptions);
   }
   
-    google.maps.event.addListener(map, 'click', function(e) {
+  /*  google.maps.event.addListener(map, 'click', function(e) {
     console.log(e);
   var outputBox = document.getElementById('output');
   outputBox.value+="\nnew google.maps.LatLng("+e.latLng.Xa+","+e.latLng.Ya+")";
-  });
+  });*/
 
 
   var parkCoords = [
