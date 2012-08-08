@@ -452,18 +452,29 @@ var victoriaLatLng = new google.maps.LatLng(51.53674,-0.021182);
   
   }
     </script>
+	<SCRIPT LANGUAGE="javascript">
+
+function OnChange(dropdown)
+{
+//Stuff that happens when the drop down menu is changed
+    alert("Oh you, you changed that drop down, didn't you!?")
+}
+
+</SCRIPT>
   </head>
   <body onload="initialize()" class="landscape">
   	<img src="banner.png"; align ="center" height="68"; width="417"/>
     <div id="information">
 	<form name="Combobox">
 
-	<SELECT NAME="Station" SIZE=0>  
+	<select name=Station onchange='OnChange(this.form.Station);'>  
 <OPTION VALUE="0">Stratford
 <OPTION VALUE="1">Stratford International
 <OPTION VALUE="2">West Ham
 <OPTION VALUE="3">Homerton
+
 </SELECT> 
+
 </form>
 	<table cellspacing="0">
        <tr><th>Destination</th><th>Time</td><th>Plat</th></tr>
