@@ -498,25 +498,21 @@ function OnChange(dropdown)
 {
 //Stuff that happens when the drop down menu is changed
     if (dropdown.value == 0) {
-	clearTable();
-	appendTable("Kings Cross","5:12",3);
+
 	}
 	if (dropdown.value == 1) {
-	clearTable();
-	appendTable("London Waterloo","5:09",1);
+
 	}
 	if (dropdown.value == 2) {
-	clearTable();
-	appendTable("Piccadilly","5:14",2);
+
 	}
 	if (dropdown.value == 3) {
-	clearTable();
-	appendTable("Lilpad","5:19",7);
+
 	}
 }
 
-function appendTable(Destination, Time, Plat){
-document.getElementById("Trains").innerHTML += "<tr><td>" + Destination + "</td><td>" + Time + "</td><td>" + Plat + "</td></tr>";
+function appendTable(Station, Destination, Time, Plat){
+document.getElementById("Trains").innerHTML += '<tr class="' + Station + '"><td>' + Destination + '</td><td>' + Time + '</td><td>' + Plat + '</td></tr>';
 }
 
 function clearTable(){
@@ -524,9 +520,16 @@ document.getElementById("Trains").innerHTML = "<tr><th>Destination</th><th>Time<
 }
 
 function getJSON(){
-	$.ajax('train_data.json',{
+	$.ajax('api.php?dt=.json',{
+		dataType: 'json',
 		success:function (transport){
-			alert(transport.responseText);
+			console.log(transport);
+			for(var i=0;i<transport.length;i++){
+			appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, transport[i].DEPTIME, transport[i].PLAT)
+			}
+		},
+		error:function (e){
+			console.log(e);
 		}
 	});
 }
