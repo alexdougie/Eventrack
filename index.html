@@ -76,21 +76,26 @@ filter:alpha(opacity=40); /* For IE8 and earlier */
 	window.onload = function() { BindEvent(); }
 	
       var gatemap = {};
+	  //Generates random populations as a proof of concept.
+	  var victoriarndnumber=Math.floor(Math.random()*40000)
+	  var eton_manorrndnumber=Math.floor(Math.random()*40000)
+	  var greenwayrndnumber=Math.floor(Math.random()*40000)
+	  var stratford_walkrndnumber=Math.floor(Math.random()*40000)
 gatemap['victoria'] = {
   center: new google.maps.LatLng(51.53674,-0.021182),
-  population: 3000
+  population: victoriarndnumber
 };
 gatemap['eton_manor'] = {
   center: new google.maps.LatLng(51.55298,-0.019251),
-  population: 15000
+  population: eton_manorrndnumber
 };
 gatemap['greenway'] = {
   center: new google.maps.LatLng(51.534431,-0.007769),
-  population: 25000
+  population: greenwayrndnumber
 }
 gatemap['stratford_walk'] = {
   center: new google.maps.LatLng(51.542165,-0.008746),
-  population: 40000
+  population: stratford_walkrndnumber
 }
   
 var gateCircle;
