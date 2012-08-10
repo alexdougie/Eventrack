@@ -8,59 +8,62 @@ $sql="SELECT OLYMP_STATION, DEPTIME, DEP_TO, PLAT FROM `Eventrack Static TT Data
 
 $result = mysql_query($sql);
 
-//$STARTTIME=date('Hi');
+date_default_timezone_set("Europe/London");
 
-$STARTTIME = '0000';
+//Current Time 
+//The Train's Time
+//If the Train's Time is less than 2 hours in the future, then it sends the train
 
-//var_dump($STARTTIME);
+$currentTime = date('H:i');
 
-$starttime = strToMins($STARTTIME);
-$preendtime = strToMins($STARTTIME) + 120;
-	
-$preendtime;
-$starttime;
+function stringrpl($x,$r,$str) 
+{ 
+$out = ""; 
+$temp = substr($str,$x); 
+$out = substr_replace($str,"$r",$x); 
+$out .= $temp; 
+return $out; 
+} 
+
 
 $output="";
 
 $output.= ('[');
 
-while($out=mysql_fetch_assoc($result)){
+	while($out=mysql_fetch_assoc($result)){
 
-$testtime = $out['DEPTIME'];
-	$allowtrain = false;
-	if ($starttime < strToMins($testtime) && $testtime < $preendtime) {
-		$allowtrain = true;
-	} else {
-		if ($preendtime > 1440) {
-			$postendtime = $preendtime - 1440;
-			if (strToMins($testtime) < $postendtime){
-				$allowtrain = true;
+	$trainTime = strToTime(stringrpl(2,":",$out['DEPTIME']));
+	
+	if ($out['DEPTIME'] == "null"){
+	continue;
+	}
+	
+	//echo $out['DEPTIME'];
+	
+	$allowTrain = False;
+	//echo " ". strToTime(stringrpl(2,":",str_replace(" ","",$out['DEPTIME'])));
+	
+		if (strToTime(stringrpl(2,":",$out['DEPTIME'])) - strToTime($currentTime) < 7200){
+			if (strToTime(stringrpl(2,":",$out['DEPTIME'])) - strToTime($currentTime) > 0){
+				$allowTrain = True;
 			}
 		}
+
+	if ($allowTrain == True){
+	
+			$output.= '{';
+
+			$output.= '"OLYMP_STATION":"'.$out['OLYMP_STATION'].'",';
+			$output.= '"DEPTIME":"'.stringrpl(2,":",$out['DEPTIME']).'",';
+			$output.= '"DEP_TO":"'.$out['DEP_TO'].'",';
+			$output.= '"PLAT":"'.$out['PLAT'].'"';
+
+			$output.= '},';
+		}
 	}
-	if(strToMins($testtime)==0) $allowtrain = false;
-
-
-if($allowtrain === true){	
-$output.= '{';
-
-$output.= '"OLYMP_STATION":"'.$out['OLYMP_STATION'].'",';
-$output.= '"DEPTIME":"'.strToMins($out['DEPTIME']).'",';
-$output.= '"DEP_TO":"'.$out['DEP_TO'].'",';
-$output.= '"PLAT":"'.$out['PLAT'].'"';
-
-$output.= '},';
-}
-}
+	
 $output = substr($output, 0, -1);
 $output.= (']');
 
 echo $output;
-
-function strToMins($str){
-	$hours = intval($str[0] . $str[1]) * 60;
-	$minutes = intval($str[2] . $str[3]);
-	return $hours + $minutes;
-}
-
 ?>
