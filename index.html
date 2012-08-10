@@ -63,7 +63,7 @@
         font-size: 20px;
       }
 	  
-	  table.SFA tr.SFA, table.HMN tr.HMN, table.WEH tr.WEH, table.SRA tr.SRA, table tr#header {
+	  table.SRA tr.SFA, table.HMN tr.HMN, table.WEH tr.WEH, table.SFA tr.SRA, table tr#header {
 		display:table-row;
 	  }
 	  
@@ -535,11 +535,11 @@ function getJSON(){
 		success:function (transport){
 			console.log(transport);
 			for(var i=0;i<transport.length;i++){
-				var hours = (Math.floor(transport[i].DEPTIME / 60)).toString();
-				var minutes = (transport[i].DEPTIME % 60).toString();
-				if (hours.length == 1) {hours = "0" + hours}
-				if (minutes.length == 1) {minutes = "0" + minutes}
-				appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, hours + ":" + minutes, transport[i].PLAT);
+				if(transport[i].PLAT == 0){
+				appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, transport[i].DEPTIME, "");
+				}else{
+				appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, transport[i].DEPTIME, transport[i].PLAT);
+				}
 			}
 		},
 		error:function (e){
@@ -551,7 +551,7 @@ function getJSON(){
 </SCRIPT>
   </head>
   <body onload="initialize();getJSON();" class="landscape">
-  <div id="banner"><img src="banner.png"; align ="center" height="68" width="417"/></div>
+  <div id="banner"><a title="Eventrack"><img src="banner.png"; align ="center" height="68"; width="417";/></a></div>
     <div id="information">
 	<form name="Combobox">
 
