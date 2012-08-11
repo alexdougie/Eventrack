@@ -536,7 +536,11 @@ function getJSON(){
 			console.log(transport);
 			for(var i=0;i<transport.length;i++){
 				if(transport[i].PLAT == 0){
-				appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, transport[i].DEPTIME, "");
+					if (transport[i].DEP_TO == "London Fenchurch St"){
+					appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, transport[i].DEPTIME, "7");
+					}else{
+					appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, transport[i].DEPTIME, "8");
+					}
 				}else{
 				appendTable(transport[i].OLYMP_STATION, transport[i].DEP_TO, transport[i].DEPTIME, transport[i].PLAT);
 				}
